@@ -15,15 +15,15 @@
                     "NetworkConfiguration": {
                         "AwsvpcConfiguration": {
                             "Subnets": [
-                                "subnet-012be152c4ad96957",
-                                "subnet-00248fd6e1ab868fb",
-                                "subnet-0b07a4b2c950142f1",
-                                "subnet-0ec60288060aea0ca",
-                                "subnet-025deaf3923c77a20"
+                                "subnet-0d541650bc297d9da",
+                                "subnet-022870e6256aeccb6",
+                                "subnet-0172753174c69a2da",
+                                "subnet-0bcb177f1915fb9a0",
+                                "subnet-0d11964609110ab2c"
                                 
                             ],
                             "SecurityGroups": [
-                                "sg-097547a6558ed4087"
+                                "sg-0a7e1cfb291cfc4ef"
                             ],
                             "AssignPublicIp": "ENABLED"
                         }
