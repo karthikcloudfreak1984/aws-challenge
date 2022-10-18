@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "web_app-api",
-            "image": "434442716997.dkr.ecr.us-east-1.amazonaws.com/web:v2",
+            "image": "434442716997.dkr.ecr.us-east-1.amazonaws.com/web:v1",
             "cpu": 1024,
             "memory": 2048,
             "portMappings": [
