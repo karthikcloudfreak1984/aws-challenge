@@ -1,0 +1,49 @@
+
+{
+    "version": 0.0,
+    "Resources": [
+        {
+            "TargetService": {
+                "Type": "AWS::ECS::Service",
+                "Properties": {
+                    "TaskDefinition": "arn:aws:ecs:us-east-1:434442716997:task-definition/service:1",
+                    "LoadBalancerInfo": {
+                        "ContainerName": "web_app-api",
+                        "ContainerPort": 80
+                    },
+                    "PlatformVersion": "LATEST",
+                    "NetworkConfiguration": {
+                        "AwsvpcConfiguration": {
+                            "Subnets": [
+                                "subnet-012be152c4ad96957",
+                                "subnet-00248fd6e1ab868fb",
+                                "subnet-0b07a4b2c950142f1",
+                                "subnet-0ec60288060aea0ca",
+                                "subnet-025deaf3923c77a20"
+                                
+                            ],
+                            "SecurityGroups": [
+                                "sg-097547a6558ed4087"
+                            ],
+                            "AssignPublicIp": "ENABLED"
+                        }
+                    },
+                    "CapacityProviderStrategy": [
+                        {
+                            "Base" : 1,
+                            "CapacityProvider" : "FARGATE_SPOT",
+                            "Weight" : 2
+                        },
+                        {
+                            "Base" : 0,
+                            "CapacityProvider" : "FARGATE",
+                            "Weight" : 1
+                        }
+                    ]
+                }               
+            }
+        }
+    ],
+    "Hooks": [
+    ]
+}
