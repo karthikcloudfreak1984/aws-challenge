@@ -36,9 +36,9 @@ jobs:
          run: terragrunt plan
        - name: Terragrunt apply
          run: terragrunt apply -auto-approve
-  build-app:
+  deploy-app:
     needs: deploy-infra
-    name: build-app
+    name: deploy-app
     runs-on: ubuntu-latest
     environment: production
     defaults:
